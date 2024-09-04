@@ -3,24 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallpaper Website</title>
+    <title>Wallpaper Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Wallpaper Gallery</h1>
+        <h1>Wallpaper Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section id="upload-section">
-            <h2>Upload Wallpaper</h2>
-            <input type="file" id="fileInput" accept="image/*">
-            <button onclick="uploadWallpaper()">Upload</button>
+        <section id="home" class="hero">
+            <h2>Explore Stunning Wallpapers</h2>
+            <p>Find the perfect wallpaper for your device</p>
         </section>
-        <section id="gallery-section">
-            <h2>Wallpaper Gallery</h2>
-            <div id="gallery"></div>
+
+        <section id="categories">
+            <h2>Categories</h2>
+            <div class="categories">
+                <div class="category">
+                    <h3>Nature</h3>
+                    <p>Beautiful landscapes and natural wonders</p>
+                </div>
+                <div class="category">
+                    <h3>Urban</h3>
+                    <p>Cityscapes and architectural marvels</p>
+                </div>
+                <div class="category">
+                    <h3>Abstract</h3>
+                    <p>Creative and artistic designs</p>
+                </div>
+                <div class="category">
+                    <h3>Animals</h3>
+                    <p>Wildlife and pet photography</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="wallpaper">
+                    <img src="wallpapers/wallpaper1.jpg" alt="Wallpaper 1">
+                </div>
+                <div class="wallpaper">
+                    <img src="wallpapers/wallpaper2.jpg" alt="Wallpaper 2">
+                </div>
+                <div class="wallpaper">
+                    <img src="wallpapers/wallpaper3.jpg" alt="Wallpaper 3">
+                </div>
+                <div class="wallpaper">
+                    <img src="wallpapers/wallpaper4.jpg" alt="Wallpaper 4">
+                </div>
+                <!-- Add more wallpapers as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p id="formResponse"></p>
         </section>
     </main>
-    <script src="scripts.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Wallpaper Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
